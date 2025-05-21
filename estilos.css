@@ -56,13 +56,32 @@ nav ul li a:hover{
 /*texto centrado inicio*/
 .centrado-texto{
     text-align: center;
+    flex: 1;
+    max-width: 800px;
+    margin:20px auto;
+    padding: 20px;
 }
-.centrado-flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 /*texto centrado final*/
+/*redes inicio*/
+.redes{
+    font-size: 16px;
+    text-align: center;
+    flex: 1;
+    max-width: 800px;
+    margin:20px auto;
+    padding: 20px;  
+}
+.textor{
+    font-size: 16px;
+    display: inline;
+    margin: 0;
+    flex: 1;
+    max-width: 800px;
+    margin:20px auto;
+    padding: 20px; 
+}
+/*redes final*/
 /*barra verde abajo inicio*/
 footer{
     background-color: #32cd32;
