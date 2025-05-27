@@ -1,6 +1,7 @@
 *{
 margin: 0px;
 padding: 0px;
+box-sizing: border-box;
 
 }
 body{
@@ -21,86 +22,104 @@ align-items: center;
 gap: 15px;
 color: #000000;
 font-size: 50px;
-margin: 0;
+text-align: center;
+padding: 0 20px;
+flex-wrap: wrap;
 }
 .logo {
-height: 80px;
+height: auto;
+max-height: 80px;
+width: auto;
+max-width: 100%;
 vertical-align: middle; 
 }
 nav{
 background: #47c113;
-height: 50px;
+height: auto;
 }
-
 nav ul{
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100%;
-margin: 0;
-padding: 0;
-}
-
-nav ul li{
+flex-wrap: wrap;
 list-style: none;
-margin: 0 15px;
+padding: 10px 0;
+}
+nav ul li{
+margin: 10px 15px;
 color: #000000;
 font-size: 20px;
 }
-
+#layout {
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+}
 .clear{
 clear: both;
 }
 #contenido{
-float: left;
-width: calc(80% - 80px);
-min-height: 500px;
-background: #ffff;
+flex: 3;
+min-width: 300px;
+background: #fff;
 padding: 40px;
 }
-.article{
+.article {
 color: black;
 margin-top: 15px;
 margin-bottom: 15px;
 padding-bottom: 10px;
 border-bottom: 1px solid #000;
 }
-aside{
-float: left;
-width: calc(20% - 20px);
-min-height: 500px;
+aside {
+flex: 1;
+min-width: 250px;
 background: #5add22;
-padding: 10px;
+padding: 20px;
 }
-footer{
+footer {
 background: #5add22;
-color: #ffff;
+color: #fff;
 text-align: center;
 height: 50px;
 line-height: 50px;
 }
-.centrado-texto{
-    text-align: center;
-    flex: 1;
-    max-width: 800px;
-    margin:20px auto;
-    padding: 20px;
+
+.centrado-texto,
+.redes,
+.textor {
+text-align: center;
+font-size: 16px;
+max-width: 800px;
+margin: 20px auto;
+padding: 20px;
 }
-.redes{
-    font-size: 16px;
-    text-align: center;
-    flex: 1;
-    max-width: 800px;
-    margin:20px auto;
-    padding: 20px;  
+
+@media screen and (max-width: 768px) {
+header h1 {
+font-size: 32px;
+flex-direction: column;
+height: auto;
+padding: 20px;
 }
-.textor{
-    text-align: center;
-    font-size: 16px;
-    display: inline;
-    margin: 0;
-    flex: 1;
-    max-width: 800px;
-    margin:20px auto;
-    padding: 20px; 
+
+nav ul {
+flex-direction: column;
+}
+
+nav ul li {
+margin: 8px 0;
+font-size: 18px;
+}
+
+#layout {
+flex-direction: column;
+}
+
+#contenido, aside {
+flex: 1;
+min-width: unset;
+width: 100%;
+padding: 20px;
+}
 }
