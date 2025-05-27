@@ -2,15 +2,22 @@
 margin: 0px;
 padding: 0px;
 box-sizing: border-box;
-
 }
+html, body{
+height: 100%;
+}
+
 body{
+display: flex;
+flex-direction: column;
+min-height: 100vh;
 background: white;
 font-family: Arial, Helvetica, sans-serif;
-
 }
 #container{
-flex:1;
+flex: 1;
+display: flex;
+flex-direction: column;
 }
 header h1{
 background: #5add22;
@@ -54,15 +61,13 @@ font-size: 20px;
 display: flex;
 flex-wrap: wrap;
 width: 100%;
-}
-.clear{
-clear: both;
+flex: 1
 }
 #contenido{
 flex: 3;
 min-width: 300px;
 background: #fff;
-padding: 40px;
+padding: 20px;
 }
 .article {
 color: black;
@@ -73,7 +78,7 @@ border-bottom: 1px solid #000;
 }
 aside {
 flex: 1;
-min-width: 250px;
+min-width: 300px;
 background: #5add22;
 padding: 20px;
 }
